@@ -5,9 +5,13 @@ Este programa constará de un código cuya función es la de representar la cali
 ## Integrantes del equipo
 
 Adrián Espinosa Jiménez-Adri100
+
 Jimena Pelegrí Espinosa de los Monteros-
+
 Valeria Collmenares Figueroa-
+
 Eduardo Viejo Campos-
+
 Darlenne 
 
 
