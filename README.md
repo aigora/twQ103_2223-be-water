@@ -6,13 +6,14 @@ Este programa constará de un código cuya función es la de representar la cali
 
 Adrián Espinosa Jiménez-Adri100
 
-Jimena Pelegrí Espinosa de los Monteros-
-
-Valeria Collmenares Figueroa-
-
-Eduardo Viejo Campos-
+Jimena Pelegrí Espinosa de los Monteros-Jpelegri
 
 Jeans Darlenne Velásquez Alejando-darlennev
+
+Valeria Collmenares Figueroa-Valeeria15
+
+Eduardo Viejo Campos-EduardoViejo
+
 
 
 ## Objetivos del trabajo
