@@ -12,7 +12,7 @@ Valeria Collmenares Figueroa-
 
 Eduardo Viejo Campos-
 
-Darlenne 
+Jeans Darlenne Velásquez Alejando-darlennev
 
 
 ## Objetivos del trabajo
