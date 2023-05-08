@@ -1,11 +1,18 @@
-# [Título del trabajo]
+# Be Water
 
-[Descripción breve del proyecto a realizar (2-3 frases).]
+Este programa constará de un código cuya función es la de representar la calidad de las aguas en los distintos barrios de Madrid, así como su estudio y/o análisis de las mismas con el paso del tiempo.
 
 ## Integrantes del equipo
 
-[Nombres, apellidos, y usuario GitHub de los integrantes del equipo.]
+Adrián Espinosa Jiménez-Adri100
+Jimena Pelegrí Espinosa de los Monteros-
+Valeria Collmenares Figueroa-
+Eduardo Viejo Campos-
+Darlenne 
+
 
 ## Objetivos del trabajo
 
-[Lista de los objetivos que se persiguen con el trabajo propuesto.]
+- Realizar un programa operativo y funcional de acuerdo con el tema propuesto.
+- Emplear las técnicas de programación requeridas como funciones,ficheros,estructuras...
+
