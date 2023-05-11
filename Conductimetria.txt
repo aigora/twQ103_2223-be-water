@@ -1,0 +1,8 @@
+Conductimetria
+
+Que es?
+Es un metodo analitico basado en la conduccion electrica de los iones en disolucion.
+Para que sirve?
+Se utiliza para medir la molaridad de una disolucion, determinada por su carga entre dos puntos de diferente potencial.
+Cual es la conductividad del agua pura?
+La conductividad del agua pura es cerca de 5 . 10-8 ohmnios -1 cm-1 y el menor trazo de una impureza ionica lleva a un gran aumento de la conductividad.
