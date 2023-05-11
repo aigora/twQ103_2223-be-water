@@ -1,0 +1,7 @@
+pH
+¿Qué es el pH?
+El pH es una medida para determinar el grado de alcalinidad o acidez de una disolución.
+¿Cómo se mide el pH?
+El pH se mide en una escala del 1 al 14. Siendo 1 el valor más ácido, 14 el valor más alcalino, y 7 el valor neutro.
+¿Cuál es el rango de pH para el agua potable?
+El rango de pH para el agua potable es de 6,5-7,5
