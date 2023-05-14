@@ -165,13 +165,16 @@ int analizardatos (){
 		
 		switch (opcion1)
 		{
-			case '1':
+				case '1':
 				system("cls");
 				do{
-					printf("Elija una opción: \n");
-					printf("1. Calcular el máximo de un parámetro.\n");
-					printf("2. Calcular el mínimo de un parámetro.\n");
+					printf("Elija el parametro para calcular su maximo y minimo: \n");
+					printf("1. pH\n");
+					printf("2. Conductividad.\n");
+					printf("3. Turbidez\n");
+					printf("4. Coloides");
 					scanf("%d", &opcion2);
+					
 				}while(opcion2 != 1 || opcion2 !=2);
 			break;
 			
