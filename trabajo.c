@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
-#include <locale.h> //para Òadir tildes y la letra Ò
+#include <locale.h> //para √±adir tildes y la letra √±
 #include<string.h>
 
 
@@ -24,16 +24,16 @@ int anyadirdatos(){
 	//nos aseguramos que todos los ficheros tengan el mismo nombre.
 	
 	do{
-	printf("Introduzca el aÒo del estudios:\n");
+	printf("Introduzca el a√±o del estudios:\n");
 	scanf("%d", &anyofichero);
-    } while (anyofichero < 0); //nos aseguramos que no aÒadan aÒos negativos
+    } while (anyofichero < 0); //nos aseguramos que no a√±adan a√±os negativos
     
     do{
 	printf("Introduzca el mes del estudio:\n");
 	scanf("%d", &mesfichero);
 	} while (mesfichero < 1 || mesfichero>12);//nos aseguramos que introduzca un mes real
 	
-	printf("Introduzca el barrio del estudio (Por favor, introducir la primera letra en may˙scula).:\n");
+	printf("Introduzca el barrio del estudio (Por favor, introducir la primera letra en may√∫scula).:\n");
 	scanf("%s", &barriofichero);
 	
 	sprintf(nombreArchivo, "%d%d_%s.txt", anyofichero, mesfichero, barriofichero);//metemos los datos en una variable para nombrar el fichero
@@ -46,14 +46,14 @@ int anyadirdatos(){
 		printf("\nError en la apertura de ficheros\n");
 		return 1;
 	} else{
-		printf("\nArchivo creado con Èxito.");
+		printf("\nArchivo creado con √©xito.");
 	}
 	
 	system("pause");
     system("cls");
     
     do{
-    	printf("Introduzca el n˙mero de fuentes:\n");
+    	printf("Introduzca el n√∫mero de fuentes:\n");
     	scanf("%d", &nfuentes);
 	}while (nfuentes<1);
 	
@@ -63,7 +63,7 @@ int anyadirdatos(){
 		do{
 			printf("Introduce el pH de la fuente %d\n", i+1);
     		scanf("%f", &fuentes[i].pH);
-		}while (fuentes[i].pH<0 || fuentes[i].pH>14);//nos aseguramos que el pH introducido sea v·lido
+		}while (fuentes[i].pH<0 || fuentes[i].pH>14);//nos aseguramos que el pH introducido sea v√°lido
 		
     	printf("Introduce la conductividad de la fuente %d\n", i+1);
     	scanf("%d", &fuentes[i].conductividad);
@@ -71,7 +71,7 @@ int anyadirdatos(){
     	scanf("%d", &fuentes[i].turbidez);
     	printf("Introduce los coliformes de la fuente %d\n", i+1);
     	scanf("%d", &fuentes[i].coliformes);
-    	fprintf(fentrada, "Fuente_%d\t%.2f\t%d\t%d\t%d\n", i+1, fuentes[i].pH, fuentes[i].conductividad, fuentes[i].turbidez, fuentes[i].coliformes);
+    	fprintf(fentrada, "Fuente_%d\t %.2f\t          %d\t  %d\t          %d\n", i+1, fuentes[i].pH, fuentes[i].conductividad, fuentes[i].turbidez, fuentes[i].coliformes);
 	}
     fclose(fentrada);
     
@@ -106,16 +106,16 @@ int analizardatos (){
 	FILE * fentrada;
 	
 	do{
-	printf("Introduzca el aÒo del estudios:\n");
+	printf("Introduzca el a√±o del estudios:\n");
 	scanf("%d", &anyofichero);
-    } while (anyofichero< 0); //nos aseguramos que no aÒadan aÒos negativos
+    } while (anyofichero< 0); //nos aseguramos que no a√±adan a√±os negativos
     
     do{
 	printf("Introduzca el mes del estudio (entre 1 y 12):\n");
 	scanf("%d", &mesfichero);
 	} while (mesfichero < 1 || mesfichero>12);//nos aseguramos que introduzca un mes real
 	
-	printf("Introduzca el barrio del estudio (Por favor, introducir la primera letra en may˙scula).:\n");
+	printf("Introduzca el barrio del estudio (Por favor, introducir la primera letra en may√∫scula).:\n");
 	scanf("%s", barriofichero);
 	
 	sprintf(nombreArchivo, "%d%d_%s.txt",anyofichero, mesfichero, barriofichero);
@@ -123,14 +123,14 @@ int analizardatos (){
 	fentrada = fopen(nombreArchivo, "r");//buscamos el fichero
 	
     if(fentrada == NULL){
-       printf("	Error en la apertura del fichero. Este fichero no existe en la base de datos. Si desea Òadirlo dirÌgase al men˙ y pulse la opciÛn 1. \n");
+       printf("	Error en la apertura del fichero. Este fichero no existe en la base de datos. Si desea √±adirlo dir√≠gase al men√∫ y pulse la opci√≥n 1. \n");
        return 0;
     }//si el fichero no existe indicamos al usuario que cree el fichero.
     
 	printf("\n El fichero contiene los siguientes datos:\n ");
 	printf("\n");
 	
-	// Ignorar la primera lÌnea ya que es el encabezado y no nos sirve
+	// Ignorar la primera l√≠nea ya que es el encabezado y no nos sirve
 	char buffer[1024];
     fgets(buffer, 1024, fentrada);
     	
@@ -151,12 +151,12 @@ int analizardatos (){
 	return 0;
 	
 	do{
-		printf("A continuaciÛn, indique el dato que desee saber:\n");
-		printf("1. Saber valores m·ximos y mÌnimos de los par·metros.\n");
-		printf("2. Calcular la media de un par·metro.\n");
-		printf("3. Ordenar los par·metros de menor a mayor.\n");
-		printf("4. Ordenar los par·metros de mayor a menor");
-		printf("5. Volver al men˙ principal");
+		printf("A continuaci√≥n, indique el dato que desee saber:\n");
+		printf("1. Saber valores m√°ximos y m√≠nimos de los par√°metros.\n");
+		printf("2. Calcular la media de un par√°metro.\n");
+		printf("3. Ordenar los par√°metros de menor a mayor.\n");
+		printf("4. Ordenar los par√°metros de mayor a menor");
+		printf("5. Volver al men√∫ principal");
 		
 		do{
         	printf("Introduce una opcion:\n");
@@ -170,9 +170,9 @@ int analizardatos (){
 			case '1':
 				system("cls");
 				do{
-					printf("Elija una opciÛn: \n");
-					printf("1. Calcular el m·ximo de un par·metro.\n");
-					printf("2. Calcular el mÌnimo de un par·metro.\n");
+					printf("Elija una opci√≥n: \n");
+					printf("1. Calcular el m√°ximo de un par√°metro.\n");
+					printf("2. Calcular el m√≠nimo de un par√°metro.\n");
 					scanf("%d", &opcion2);
 				}while(opcion2 != 1 || opcion2 !=2);
 			break;
@@ -180,7 +180,7 @@ int analizardatos (){
 		case '2':
 				system("cls");
 				do{
-					printf("Elija el par·metro para calcular la media opciÛn: \n");
+					printf("Elija el par√°metro para calcular la media opci√≥n: \n");
 					printf("1. pH\n");
 					printf("2. Conductividad.\n");
 					printf("3. Turbidez\n");
@@ -192,7 +192,7 @@ int analizardatos (){
 			case '3':
 				system("cls");
 				do{
-					printf("Elija el par·metro para ordenarlo de menor a mayor: \n");
+					printf("Elija el par√°metro para ordenarlo de menor a mayor: \n");
 					printf("1. pH\n");
 					printf("2. Conductividad.\n");
 					printf("3. Turbidez\n");
@@ -204,7 +204,7 @@ int analizardatos (){
 			case '4':
 				system("cls");
 				do{
-					printf("Elija el par·metro para ordenarlo de menor a mayor: \n");
+					printf("Elija el par√°metro para ordenarlo de menor a mayor: \n");
 					printf("1. pH\n");
 					printf("2. Conductividad.\n");
 					printf("3. Turbidez\n");
@@ -228,11 +228,11 @@ int main (){
 	char textph [10000];
 	
 	do {
-        printf("Bienvenido al Programa be water. Gracias por usar nuestros servicios. A continuaciÛn, indique lo que desee realizar \n");
-        printf("1. A—ADIR DATOS\n");
+        printf("Bienvenido al Programa be water. Gracias por usar nuestros servicios. A continuaci√≥n, indique lo que desee realizar \n");
+        printf("1. A√ëADIR DATOS\n");
         printf("2. ANALIZAR DATOS\n");
-        printf("3. VER EVOLUCI”N\n");
-        printf("4. GUÕA DE PAR¡METROS\n");
+        printf("3. VER EVOLUCI√ìN\n");
+        printf("4. GU√çA DE PAR√ÅMETROS\n");
         printf("5. SALIR\n");
         
 		do{
@@ -246,7 +246,7 @@ int main (){
         {
             case '1': 
 				system("cls");
-        		printf("\t \t \t || A—ADIR DATOS || \n");
+        		printf("\t \t \t || A√ëADIR DATOS || \n");
         		printf("\n");
         		anyadirdatos();
         		system("pause");
@@ -264,7 +264,7 @@ int main (){
         	
         	case '3':
         		system("cls");
-        		printf("\t \t \t || VER EVOLUCI”N || \n");
+        		printf("\t \t \t || VER EVOLUCI√ìN || \n");
         		system("pause");
         		system("cls");
         	break;
