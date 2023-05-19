@@ -81,7 +81,7 @@ int anyadirdatos(){
     	scanf("%d", &fuentes[i].turbidez);
     	printf("Introduce los coliformes de la fuente %d\n", i+1);
     	scanf("%d", &fuentes[i].coliformes);
-    	fprintf(fentrada, "Fuente_%d\t%.2f\t%d\t%d\t%d\n", i+1, fuentes[i].pH, fuentes[i].conductividad, fuentes[i].turbidez, fuentes[i].coliformes);
+    	fprintf(fentrada, "Fuente_%d\t %.2f\t          %d\t  %d\t          %d\n", i+1, fuentes[i].pH, fuentes[i].conductividad, fuentes[i].turbidez, fuentes[i].coliformes);
 	}
     fclose(fentrada);
     
