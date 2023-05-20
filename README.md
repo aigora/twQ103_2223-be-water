@@ -10,7 +10,7 @@ Jimena Pelegrí Espinosa de los Monteros-Jpelegri
 
 Jeans Darlenne Velásquez Alejando-darlennev
 
-Valeria Collmenares Figueroa-Valeeria15
+Valeria Colmenares Figueroa-Valeeria15
 
 Eduardo Viejo Campos-EduardoViejo
 
