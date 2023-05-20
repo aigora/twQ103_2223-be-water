@@ -223,8 +223,8 @@ int guia() {
         printf("Seleccione una opción: \n");
         printf("1. pH\n");
         printf("2. Conductividad\n");
-        printf("3. Turbidez\n");
-        printf("4. Coloides\n");
+        //printf("3. Turbidez\n");
+        //printf("4. Coloides\n");
         printf("5. Volver al menú principal\n");
 
         do {
