@@ -33,8 +33,7 @@ int anyadirdatos(){
 	int i, nfuentes;
 	char nombreArchivo [100];
 	char fichero;
-	float pHmax;
-	int posmax;
+
 	
 	//nos aseguramos que todos los ficheros tengan el mismo nombre.
 	
@@ -120,8 +119,16 @@ int analizardatos (){
 	int maxpos,maxpos1,maxpos2,maxpos3;
 	int minpos,minpos1,minpos2,minpos3;
 	int conductividadmax,turbidezmax,coliformesmax;
-	int contador=0;
+	float contador=0;
     float minpH,mincond,minturb, mincol;
+    float sumaPH = 0.0;
+    float mediaPH;
+    float sumaConductividad=0.0;
+    float mediaConductividad;
+    float sumaTurbidez=0.0;
+    float mediaTurbidez;
+    float sumaColiformes=0.0;
+    float mediaColiformes;
 	
 	FILE * fentrada;
 	FILE * fsalida;
@@ -319,21 +326,50 @@ int analizardatos (){
 						    printf("%s %.2f %d %d %d\n", fuentes[minpos3].nombre, fuentes[minpos3].pH, fuentes[minpos].conductividad, fuentes[minpos3].turbidez, fuentes[minpos3].coliformes);
 						    
 						}
-					    
+				break;
 					
 				}while(opcion2 != 1 || opcion2 !=2);
 					break;
 			
 		case '2':
 				system("cls");
-				do{
-					printf("Elija el parámetro para calcular la media opciónn: \n");
-					printf("1. pH\n");
-					printf("2. Conductividad.\n");
-					printf("3. Turbidez\n");
-					printf("4. Coloides\n");
-					scanf("%d", &opcion3);
-				}while(opcion3 < 1 || opcion3 >4);
+				fentrada = fopen(nombreArchivo, "r");
+				printf("A continuación se muestra la media de los diferentes parámetros del fichero.\n");
+				char buffer[1024];
+    			fgets(buffer, 1024, fentrada);
+    			
+    			for (i = 0; i < contador; i++) { 
+        			fscanf(fentrada, "%s %f %d %d %d\n", fuentes[i].nombre, &fuentes[i].pH, &fuentes[i].conductividad, &fuentes[i].turbidez, &fuentes[i].coliformes);
+        			sumaPH += fuentes[i].pH;
+    			}
+    
+   				 mediaPH = sumaPH / contador;
+   				 
+				for (i = 0; i < contador; i++) { 
+        			fscanf(fentrada, "%s %f %d %d %d\n", fuentes[i].nombre, &fuentes[i].pH, &fuentes[i].conductividad, &fuentes[i].turbidez, &fuentes[i].coliformes);
+        			sumaConductividad += fuentes[i].conductividad;
+    			}
+    
+   				 mediaConductividad = sumaConductividad / contador;
+   				 
+   				for (i = 0; i < contador; i++) { 
+        			fscanf(fentrada, "%s %f %d %d %d\n", fuentes[i].nombre, &fuentes[i].pH, &fuentes[i].conductividad, &fuentes[i].turbidez, &fuentes[i].coliformes);
+        			sumaTurbidez+= fuentes[i].turbidez;
+    			}
+    
+   				 mediaTurbidez = sumaTurbidez / contador;
+   				 
+   				 for (i = 0; i < contador; i++) { 
+        			fscanf(fentrada, "%s %f %d %d %d\n", fuentes[i].nombre, &fuentes[i].pH, &fuentes[i].conductividad, &fuentes[i].turbidez, &fuentes[i].coliformes);
+        			sumaColiformes += fuentes[i].coliformes;
+    			}
+    
+   				 mediaColiformes = sumaColiformes / contador;
+   				 
+				printf("La media de pH es: %.2f\n", mediaPH);
+    			printf("La media de la conductividad es: %.2f\n", mediaConductividad);
+    			printf("La media de la turbidez es: %.2f\n", mediaTurbidez);
+				printf("La media de los coliformes es: %.2f\n", mediaColiformes);
 			break;
 			
 			case '3':
@@ -461,15 +497,15 @@ int guia() {
     char opciong; // opción de las guías
 
     do {
-        printf("Seleccione una opci?n: \n");
+        printf("Seleccione una opción: \n");
         printf("1. pH\n");
         printf("2. Conductividad\n");
         printf("3. Turbidez\n");
-        printf("4. Coloides\n");
-        printf("5. Volver al men? principal\n");
+        printf("4. Coliformes\n");
+        printf("5. Volver al menú principal\n");
 
         do {
-            printf("Introduce una opci?n:\n");
+            printf("Introduce una opción:\n");
             fflush(stdin);
             scanf(" %c", &opciong);
         } while (opciong < '1' || opciong > '5');
@@ -640,3 +676,4 @@ int main (){
 	return 0;
 	
 }
+
