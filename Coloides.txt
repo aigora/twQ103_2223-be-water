@@ -1,7 +1,0 @@
-Coloides
-Que son:
-Un colide es un sistema conformado por dos o mas fases, normalmente una fluida y otra dispersa en forma de particulas generalmente solidas muy finas.
-Caracteristicas:
--Movimiento browniano. Las particulas se mueven desordenadamente en el medio por el choque de las moleculas entre si.
--Dialisis. Presentan dialisis, un movimiento de moleculas a traves de membranas porosas, que permite purificar el sistema coloidal
--Efecto Tyndall. Un haz luminoso se hace visible al atravesar un sistema coloidal
